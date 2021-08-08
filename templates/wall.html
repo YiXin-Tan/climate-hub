@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Post Wall{% endblock %}
+{% block content%}
+  <section class="wrapper">
+    <div class="container container-padded">
+      <div class="top">
+        <h1 class="page__title">Post-it Wall</h1>
+        <h2 class="page__subtitle">Voices of the people</h2>
+        <img class="page__icon" src="/static/images/create-post.png" alt="create a post">
+      </div>
+
+      <div class="grid">
+        {% for i in range(0, 12) %}
+          <div class="grid__post" style="background-color: {{ colors | random }} ">
+            <p>
+              To: Sen. Ben Dover <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt ab repudiandae, dolores delectus non.<br><br>
+            </p> 
+            <img class="grid__reply" src="/static/images/contacts-reply.png" alt="Reply >>">
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

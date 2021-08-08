@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block body_id %}home{% endblock %}
+{% block content%}
+  <body id="home">
+      <!-- <h1>Hello world🐱</h1>
+
+      <ul>
+          <li>KM</li>
+          <li>Calico cat</li>
+          <li>Mushroom hello</li>
+          <li>Cat meet heh haha</li>
+          <li>test</li>
+      </ul> -->
+    
+
+
+
+    <section class="hero">
+      <h1 class="hero__title">CLIMATE HUB</h1>
+    </section>
+    <section class="features wrapper">
+      <div class="container container-padded">
+        <ul class="features__list">
+          <li class="features__item">
+            <img src="static/images/calendar.png" alt="Calendar" class="features__img">
+            <h3 class="features__title">Follow Events</h3>
+            <p class="features__text">Signup and take part in upcomming events. Get notified so you won't miss any of them.</p>
+            <a href="{{ url_for('events') }}" class="link">Go to Events Page</a>
+          </li>
+          
+          <li class="features__item">
+            <img src="static/images/voice-out.png" alt="Speech bubbles" class="features__img">
+            <h3 class="features__title">Voice Out</h3>
+            <p class="features__text">Post a message publicly on the virtual post-it wall, view other's opinions regarding the current climate conditions</p>
+            <a href="{{ url_for('wall') }}" class="link">Go to Post Wall</a>
+          </li>
+
+          <li class="features__item">
+            <img src="static/images/email.png" alt="Letter" class="features__img">
+            <h3 class="features__title">Contact your Leaders</h3>
+            <p class="features__text">View Senator/Congress Member's office address, work contact number and address</p>
+            <a href="{{ url_for('contact') }}" class="link">Go to Contact List</a>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <section class="info wrapper">
+      <div class="container container-padded">
+        <div class="info__item info__img">
+          <img src="static/images/group-pic.jpeg" alt="Group Picture of the creators">
+        </div>
+        <div class="info__item">
+          <h2 class="info__title">About Us</h2>
+          <p class="info__text">Founded in 2020, the lack of a climate pledge had driven us to form and unite a passionate network of changers, makers and activists. We aim to send a provocative message out to our leaders to ensure change is implemented, thus avoiding a disastrous no point of return.</p>
+        </div>
+        
+        <div class="info__item">
+          <h2 class="info__title">Contact Us</h2>
+          <p class="info__text">
+            321 Flower Street <br>
+            Seattle WA 98101<br><br>
+            Email: info@climatehub.xyz<br>
+            Contact Number: (201)123-4566
+          </p>
+
+        </div>
+        
+      </div>    
+    </section>
+
+{% endblock %}

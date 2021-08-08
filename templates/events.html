@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block title %}Events{% endblock %}
+{% block content%}
+  <section class="wrapper">
+    <div class="container container-padded">
+      <div class="top">
+        <h1 class="page__title">Upcoming Events</h1>
+      </div>
+      <div class="content">
+        <img class="action-img" src="/static/images/events-sort-by.png" alt="Events Filter">
+        <div class="event">
+          <div class="event__img">
+            <img src="/static/images/plant-tree.jpg" alt="Planting">
+          </div>
+          <div class="event__text">
+            <div class="event__date">21 Aug 2021</div>
+            <div class="event__title">Tree Planting</div>
+            <div class="event__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, maxime quia! Nemo veniam, quae ducimus laborum temporibus voluptas quam voluptatem labore natus perspiciatis placeat facilis ipsum! Vel eligendi totam.</div>
+            <a href="#" class="event__cta">Sign Up</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event__img">
+            <img src="/static/images/enviro-walk.png" alt="Planting">
+          </div>
+          <div class="event__text">
+            <div class="event__date">21 Aug 2021</div>
+            <div class="event__title">Enviro Walk</div>
+            <div class="event__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, maxime quia! Nemo veniam, quae ducimus laborum temporibus voluptas quam voluptatem labore natus perspiciatis placeat facilis ipsum! Vel eligendi totam.</div>
+            <a href="#" class="event__cta">Sign Up</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event__img">
+            <img src="/static/images/garden-waste.png" alt="Planting">
+          </div>
+          <div class="event__text">
+            <div class="event__date">21 Aug 2021</div>
+            <div class="event__title">Food & Garden waste workshop</div>
+            <div class="event__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, maxime quia! Nemo veniam, quae ducimus laborum temporibus voluptas quam voluptatem labore natus perspiciatis placeat facilis ipsum! Vel eligendi totam.</div>
+            <a href="#" class="event__cta">Sign Up</a>
+          </div>
+        </div>
+        <a href="#" class="link">See more upcoming events</a>
+      </div>
+    </div>
+  </section>
+  <section class="past-events wrapper">
+    <div class="container container-padded">
+      <div class="top">
+        <h1 class="page__title">Past Events</h1>
+      </div>
+      <div class="content--scroll">
+        <div class="past-event" style="background-image: url(/static/images/cycling.jpg);">
+          <span class="past-event__date">21 Aug 2021</span>
+          <h2 class="past-event__title">Ride 2 Work</h2>
+
+        </div>
+
+        <div class="past-event" style="background-image: url(/static/images/beach-cleanup.jpg);">
+          <span class="past-event__date">21 Aug 2021</span>
+          <h2 class="past-event__title">Sunshine Beach Cleanup</h2>
+        </div>
+
+        <div class="past-event" style="background-image: url(/static/images/earth-hour.jpg);">
+          <span class="past-event__date">26 Mar 2021</span>
+          <h2 class="past-event__title">Earth Hour</h2>
+        </div>
+
+      </div>
+      <a href="#" class="link">See more past events</a>
+    </div>
+  </section>
+
+{% endblock %}

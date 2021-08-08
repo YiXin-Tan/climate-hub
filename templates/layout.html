@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon"> -->
+    <title>{% block title%}{% endblock %}</title>
+  </head>
+  <body id="{% block body_id %}{% endblock %}">
+    <section class="nav wrapper">
+      <div class="nav-container container container-padded-light">
+        <div class="nav__hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div>
+          <a href="{{ url_for('home') }}" class="nav__logo">CLIMATE HUB</a>
+        </div>
+        <div class="nav__bar">
+          <nav>
+            <ul class="nav__list">
+              <li class="nav__item"><a href="{{ url_for('home') }}" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="{{ url_for('events') }}" class="nav__link">Events</a></li>
+              <li class="nav__item"><a href="{{ url_for('wall') }}" class="nav__link">Post Wall</a></li>
+              <li class="nav__item"><a href="{{ url_for('contact') }}" class="nav__link">Contact Rep</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav__globe">
+          <i class="fas fa-globe"></i>
+        </div>
+      </div>
+    </section>
+    <script>
+      var navHamburger = document.querySelector(".nav__hamburger");
+      var navBar = document.querySelector(".nav__bar");
+      var navItem = document.querySelectorAll(".nav__item");
+
+      navHamburger.addEventListener("click", function(){
+        navBar.classList.toggle("dropdown");
+        for (let i = 0; i < navItem.length; i++) {
+          navItem[i].classList.toggle("dropdown");
+        }
+      })
+    </script>
+    {% block content %}{% endblock %}
+    
+    <section class="footer wrapper">
+      <div class="container container-padded-light">
+        <span class="footer__logo">CLIMATE HUB</span>
+        <p class="footer__text">Copyright 2021</p>
+      </div>
+    </section>
+  </body>
+    
+</html>
